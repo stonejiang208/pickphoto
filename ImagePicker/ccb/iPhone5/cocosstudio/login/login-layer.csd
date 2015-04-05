@@ -25,6 +25,19 @@
             <PressedFileData Type="Normal" Path="login/default_a_1.png" />
             <NormalFileData Type="Normal" Path="login/default_a_0.png" />
           </NodeObjectData>
+          <NodeObjectData Name="Button_2" ActionTag="1706501191" FrameEvent="" Tag="51" LeftMargin="513.5000" RightMargin="519.5000" TopMargin="345.0000" BottomMargin="266.0000" TouchEnable="True" FontSize="14" ButtonText="Image Pick" Scale9Enable="True" Scale9Width="46" Scale9Height="36" ctype="ButtonObjectData">
+            <Position X="565.0000" Y="280.5000" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <Size X="103.0000" Y="29.0000" />
+            <PrePosition X="0.4974" Y="0.4383" />
+            <PreSize X="0.0907" Y="0.0453" />
+            <TextColor A="255" R="65" G="65" B="70" />
+            <DisabledFileData Type="Default" Path="Default/Button_Disable.png" />
+            <PressedFileData Type="Default" Path="Default/Button_Press.png" />
+            <NormalFileData Type="Default" Path="Default/Button_Normal.png" />
+          </NodeObjectData>
         </Children>
       </ObjectData>
     </Content>
