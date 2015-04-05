@@ -1,5 +1,8 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
+#include <string>
+#include <vector>
+#include "Login_Layer.h"
 
 USING_NS_CC;
 
@@ -38,6 +41,17 @@ bool AppDelegate::applicationDidFinishLaunching() {
         director->setOpenGLView(glview);
     }
 
+  {
+		std::vector <std::string> search_path;
+		search_path.push_back ("iPhone5");
+		FileUtils::getInstance ()->setSearchPaths (search_path);
+  
+		Size dev_size (1136.0f, 640.0f);
+		glview->setDesignResolutionSize (dev_size.width,
+																		 dev_size.height,
+																		 ResolutionPolicy::SHOW_ALL);
+  }
+  
     // turn on display FPS
     director->setDisplayStats(true);
 
@@ -48,6 +62,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // create a scene. it's an autorelease object
     auto scene = HelloWorld::createScene();
+    scene->addChild(Login_Layer::create ());
 
     // run
     director->runWithScene(scene);
