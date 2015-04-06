@@ -64,6 +64,7 @@
 		B81785AB1AD0D90000C358E3 /* CSB_Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B81785A71AD0D90000C358E3 /* CSB_Layer.cpp */; };
 		B81785AC1AD0D90000C358E3 /* Login_Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B81785A91AD0D90000C358E3 /* Login_Layer.cpp */; };
 		B81785AF1AD0DFB100C358E3 /* Image_Picker.mm in Sources */ = {isa = PBXBuildFile; fileRef = B81785AE1AD0DFB100C358E3 /* Image_Picker.mm */; };
+		B81785B21AD0E45E00C358E3 /* APViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = B81785B11AD0E45E00C358E3 /* APViewController.mm */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -163,6 +164,8 @@
 		B81785AA1AD0D90000C358E3 /* Login_Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login_Layer.h; sourceTree = "<group>"; };
 		B81785AD1AD0DFB100C358E3 /* Image_Picker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Image_Picker.h; path = ios/Image_Picker.h; sourceTree = SOURCE_ROOT; };
 		B81785AE1AD0DFB100C358E3 /* Image_Picker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Image_Picker.mm; path = ios/Image_Picker.mm; sourceTree = SOURCE_ROOT; };
+		B81785B01AD0E45E00C358E3 /* APViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APViewController.h; path = ios/APViewController.h; sourceTree = SOURCE_ROOT; };
+		B81785B11AD0E45E00C358E3 /* APViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = APViewController.mm; path = ios/APViewController.mm; sourceTree = SOURCE_ROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -216,6 +219,8 @@
 		080E96DDFE201D6D7F000001 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				B81785B01AD0E45E00C358E3 /* APViewController.h */,
+				B81785B11AD0E45E00C358E3 /* APViewController.mm */,
 				B81785AD1AD0DFB100C358E3 /* Image_Picker.h */,
 				B81785AE1AD0DFB100C358E3 /* Image_Picker.mm */,
 				5087E77117EB970100C73F5D /* Icons */,
@@ -510,6 +515,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B81785B21AD0E45E00C358E3 /* APViewController.mm in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				B81785AC1AD0D90000C358E3 /* Login_Layer.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
