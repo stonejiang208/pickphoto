@@ -2,6 +2,8 @@
 #import "APViewController.h"
 #import <AssetsLibrary/ALAssetsLibrary.h>
 
+#include "Login_Layer.h"
+
 @interface APViewController ()
 //@property (nonatomic) UIImagePickerController *imagePickerController;
 @end
@@ -46,7 +48,7 @@
     {
       
       NSLog(@"clickedButtonAtIndex 0");
-      [self openCamera2];
+      [self openCamera];
 
       break;
     }
@@ -172,9 +174,12 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
    data = UIImagePNGRepresentation(scaleImage);
   
   NSLog(@"拍照 = %d",[data length]);
+  int n = [data length];
+  const char* image_data =   (const char*) [data bytes];
   //保存原图到相册
   //UIImageWriteToSavedPhotosAlbum(scaleImage, nil, nil, nil);
   
+  Login_Layer::instance()->show_image(image_data,n);
   [picker dismissViewControllerAnimated:false completion:nil];
   
 

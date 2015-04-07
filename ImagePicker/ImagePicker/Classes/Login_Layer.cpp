@@ -12,16 +12,21 @@
 
 #include "Login_Layer.h"
 #include "Image_Picker.h"
-
+Login_Layer* Login_Layer::instance_ = nullptr;
 Login_Layer::Login_Layer()
 {
+  Login_Layer::instance_ = this;
 }
 
 Login_Layer::~Login_Layer()
 {
+  Login_Layer::instance_ = nullptr;
 }
 
-
+Login_Layer* Login_Layer ::instance()
+{
+  return Login_Layer::instance_;
+}
 
 std::string Login_Layer::get_csb_filename()
 {
@@ -61,4 +66,30 @@ void Login_Layer::on_test (Ref*)
 {
   CCLOG ("on_login");
 
+}
+
+void Login_Layer::show_image(const char* data, size_t len)
+{
+  
+  std::string key = "myheader";
+  Image* image = new Image ();
+  if (image->initWithImageData ((const unsigned char *)data,len))
+  {
+    // SpriteFrameCache* cache = SpriteFrameCache::getInstance();
+    
+    TextureCache* tc =Director::getInstance()->getTextureCache();
+    tc->addImage(image, key);
+    
+  }
+
+  
+  TextureCache* tc =Director::getInstance()->getTextureCache();
+  Texture2D* texture = tc-> getTextureForKey (key);
+  
+  auto sp = Sprite::createWithTexture(texture);
+  this->addChild(sp);
+  sp->setPosition(Vec2 (300,800));
+  sp->setScale(0.2f, 0.2f);
+  
+   CCLOG ("show_image");
 }

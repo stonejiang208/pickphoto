@@ -26,9 +26,13 @@ public:
 	virtual void set_callback (Widget*);
 	virtual std::string get_csb_filename ();
 	CREATE_FUNC (Self);
+public:
   
+  static Login_Layer* instance ();
+  static Login_Layer* instance_;
 public:
   void on_login (Ref*);
   void on_test (Ref*);
+  void show_image (const char* data, size_t len);
 };
 #endif /* LOGIN_LAYER_H */
