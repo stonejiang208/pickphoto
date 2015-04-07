@@ -5,7 +5,7 @@
 #include "Login_Layer.h"
 
 @interface APViewController ()
-//@property (nonatomic) UIImagePickerController *imagePickerController;
+@property (nonatomic) UIImagePickerController *imagePickerController;
 @end
 
 @implementation APViewController
@@ -29,6 +29,11 @@
   {
     
   }
+  
+  if ([[[UIDevice currentDevice] systemVersion] floatValue]>=8.0) {
+    self.modalPresentationStyle=UIModalPresentationOverCurrentContext;
+  }
+  
   return self;
 }
 
@@ -37,7 +42,9 @@
 - (void) chooseImageSour
 {
    NSLog(@"chooseImageSour");
-   UIActionSheet *chooseImageSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Camera",@"Photo library", nil];
+   UIActionSheet *chooseImageSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self
+                                                        cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Camera",
+                                      @"Photo library", nil];
   [chooseImageSheet showInView:self.view];
 }
 
@@ -51,6 +58,7 @@
       
       NSLog(@"clickedButtonAtIndex 0------{{");
       [self openCamera];
+     
      NSLog(@"clickedButtonAtIndex 0 -------}}");
       break;
     }
@@ -89,13 +97,13 @@
     {
       
       NSLog(@"clickedButtonAtIndex 2");
-      [self.view removeFromSuperview];
+      //[self.view removeFromSuperview];
       break;
     }
     default:
     {
        NSLog(@"default");
-      [self.view removeFromSuperview];
+      //[self.view removeFromSuperview];
 
       break;
     }
@@ -129,7 +137,7 @@
   UIImagePickerController * picker = [[UIImagePickerController alloc] init];
   picker.delegate = self;
 
-  
+   self.imagePickerController = picker;
   picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
   if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
   {
@@ -149,6 +157,7 @@
   NSLog(@"启动相机");
   UIImagePickerController *picker= [[UIImagePickerController alloc] init];
   picker.delegate = self;
+  self.imagePickerController = picker;
   
   if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
   {
@@ -177,8 +186,8 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
   
    data = UIImagePNGRepresentation(scaleImage);
   
-  NSLog(@"拍照 = %d",[data length]);
-  int n = [data length];
+  NSLog(@"拍照 = %ld",[data length]);
+  long int n = [data length];
   const char* image_data =   (const char*) [data bytes];
   //保存原图到相册
   //UIImageWriteToSavedPhotosAlbum(scaleImage, nil, nil, nil);
@@ -186,9 +195,9 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
   Login_Layer::instance()->show_image(image_data,n);
   [picker dismissViewControllerAnimated:false completion:nil];
   
-
+  [picker.view removeFromSuperview];
   [self.view removeFromSuperview];
-  
+  [self dismissViewControllerAnimated:YES completion:nil];
  // [self dismiss];
   
   
@@ -197,8 +206,14 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
   NSLog(@"取消");
   
+  if(!_popOver)
+    [self dismissViewControllerAnimated:YES completion:nil];
+  else
+    [_popOver dismissPopoverAnimated:YES];
+  
   [picker dismissViewControllerAnimated:false completion:nil];
   
+   [picker.view removeFromSuperview];
   [self.view removeFromSuperview];
   
   
