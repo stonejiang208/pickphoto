@@ -16,6 +16,8 @@
   APViewController *viewController = [[APViewController alloc] init];
   
   [window addSubview:viewController.view];
+   viewController.view.tag = 10000;
+  
   
  // [viewController openCamera];
   [viewController chooseImageSour];
@@ -186,7 +188,9 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
   
 
   [self.view removeFromSuperview];
-
+  
+ // [self dismiss];
+  
   
 }
 //取消
@@ -220,5 +224,23 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
   return scaledImage;
 }
 
-
+- (void) dismiss
+{
+#if 0
+  UIWindow *window = [[UIApplication sharedApplication] keyWindow];
+  
+  NSArray *views =   [window subviews];
+  
+  for(UIView* view in views)
+  {
+    if (view.tag == 10000)
+    {
+      [view removeFromSuperview];
+      
+    }
+  }
+#endif
+  
+  
+}
 @end
