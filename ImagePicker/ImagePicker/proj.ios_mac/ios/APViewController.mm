@@ -47,9 +47,9 @@
     case 0:
     {
       
-      NSLog(@"clickedButtonAtIndex 0");
+      NSLog(@"clickedButtonAtIndex 0------{{");
       [self openCamera];
-
+     NSLog(@"clickedButtonAtIndex 0 -------}}");
       break;
     }
     case 1:
@@ -99,6 +99,8 @@
     }
   }
   
+  NSLog(@"removeFromSuperview 0 -------}}");
+  [self.view removeFromSuperview];
   
 }
 - (void) openCamera2

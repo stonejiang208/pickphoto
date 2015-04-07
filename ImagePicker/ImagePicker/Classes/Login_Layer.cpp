@@ -70,8 +70,18 @@ void Login_Layer::on_test (Ref*)
 
 void Login_Layer::show_image(const char* data, size_t len)
 {
-  
   std::string key = "myheader";
+  {
+  TextureCache* tc =Director::getInstance()->getTextureCache();
+  Texture2D* texture = tc-> getTextureForKey (key);
+    if (texture)
+    {
+      tc->removeTextureForKey(key);
+    }
+  }
+  
+  // test code
+ 
   Image* image = new Image ();
   if (image->initWithImageData ((const unsigned char *)data,len))
   {
