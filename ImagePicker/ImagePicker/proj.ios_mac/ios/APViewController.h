@@ -14,7 +14,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface APViewController: UIViewController <UIImagePickerControllerDelegate>
+@interface APViewController:
+  UIViewController <
+     UIImagePickerControllerDelegate,
+     UINavigationControllerDelegate,
+     UIPopoverControllerDelegate,
+     UIActionSheetDelegate>
+{
+   UIPopoverController * _popOver;
+}
++ (APViewController*) takePhoto;
+- (void) openCamera;
+
 @end
 
 

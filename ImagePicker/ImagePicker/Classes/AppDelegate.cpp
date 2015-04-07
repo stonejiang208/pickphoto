@@ -46,7 +46,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 		search_path.push_back ("iPhone5");
 		FileUtils::getInstance ()->setSearchPaths (search_path);
   
-		Size dev_size (1136.0f, 640.0f);
+		Size dev_size (640.0f, 1136.0f);
 		glview->setDesignResolutionSize (dev_size.width,
 																		 dev_size.height,
 																		 ResolutionPolicy::SHOW_ALL);

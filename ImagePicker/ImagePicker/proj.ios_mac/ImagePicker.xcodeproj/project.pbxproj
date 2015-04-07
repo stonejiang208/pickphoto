@@ -65,6 +65,7 @@
 		B81785AC1AD0D90000C358E3 /* Login_Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B81785A91AD0D90000C358E3 /* Login_Layer.cpp */; };
 		B81785AF1AD0DFB100C358E3 /* Image_Picker.mm in Sources */ = {isa = PBXBuildFile; fileRef = B81785AE1AD0DFB100C358E3 /* Image_Picker.mm */; };
 		B81785B21AD0E45E00C358E3 /* APViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = B81785B11AD0E45E00C358E3 /* APViewController.mm */; };
+		B85C0C131AD3930E00D4D7C4 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85C0C121AD3930E00D4D7C4 /* AssetsLibrary.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -166,6 +167,7 @@
 		B81785AE1AD0DFB100C358E3 /* Image_Picker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Image_Picker.mm; path = ios/Image_Picker.mm; sourceTree = SOURCE_ROOT; };
 		B81785B01AD0E45E00C358E3 /* APViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APViewController.h; path = ios/APViewController.h; sourceTree = SOURCE_ROOT; };
 		B81785B11AD0E45E00C358E3 /* APViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = APViewController.mm; path = ios/APViewController.mm; sourceTree = SOURCE_ROOT; };
+		B85C0C121AD3930E00D4D7C4 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.2.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -180,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B85C0C131AD3930E00D4D7C4 /* AssetsLibrary.framework in Frameworks */,
 				52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */,
 				1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */,
 				D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */,
@@ -270,6 +273,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B85C0C121AD3930E00D4D7C4 /* AssetsLibrary.framework */,
 				8262943D1AAF051F00CB7CF7 /* Security.framework */,
 				52B47A461A53D09B004E4C60 /* Security.framework */,
 				D6B0611A1803AB670077942B /* CoreMotion.framework */,
