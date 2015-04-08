@@ -26,5 +26,8 @@
 
 - (IBAction)doBtnHide:(id)sender {
   NSLog (@"btn clicked");
+  [_lblHelloWorld setText: @"Hello"];
+  [sender setTitle:[_lblHelloWorld isHidden]
+   ? @"Show" : @"Hide" forState:UIControlStateNormal];
 }
 @end
