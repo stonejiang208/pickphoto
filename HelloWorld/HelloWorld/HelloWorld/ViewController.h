@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)doBtnHide:(id)sender;
 
 @end
 
