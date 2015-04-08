@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController
 
 - (IBAction)doBtnHide:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *lblHelloWorld;
 
 @end
 

@@ -25,5 +25,6 @@
 }
 
 - (IBAction)doBtnHide:(id)sender {
+  NSLog (@"btn clicked");
 }
 @end
