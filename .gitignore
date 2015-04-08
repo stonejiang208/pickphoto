@@ -1,1 +1,5 @@
-README.md~
+DerivedData/
+xcuserdata/
+*~
+project.xcworkspace/
+*.udf
