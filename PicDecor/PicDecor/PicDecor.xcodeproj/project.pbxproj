@@ -15,6 +15,7 @@
 		B86BB7171AD4D5B600CFD95E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B86BB7151AD4D5B600CFD95E /* LaunchScreen.xib */; };
 		B86BB7231AD4D5B700CFD95E /* PicDecorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B86BB7221AD4D5B700CFD95E /* PicDecorTests.m */; };
 		B86BB7311AD4E4B900CFD95E /* MyVC.mm in Sources */ = {isa = PBXBuildFile; fileRef = B86BB7301AD4E4B900CFD95E /* MyVC.mm */; };
+		B86BB7331AD4E94D00CFD95E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86BB7321AD4E94D00CFD95E /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		B86BB7221AD4D5B700CFD95E /* PicDecorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PicDecorTests.m; sourceTree = "<group>"; };
 		B86BB72F1AD4E4B900CFD95E /* MyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyVC.h; sourceTree = "<group>"; };
 		B86BB7301AD4E4B900CFD95E /* MyVC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyVC.mm; sourceTree = "<group>"; };
+		B86BB7321AD4E94D00CFD95E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B86BB7331AD4E94D00CFD95E /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +69,7 @@
 		B86BB6FA1AD4D5B600CFD95E = {
 			isa = PBXGroup;
 			children = (
+				B86BB7321AD4E94D00CFD95E /* AVFoundation.framework */,
 				B86BB7051AD4D5B600CFD95E /* PicDecor */,
 				B86BB71F1AD4D5B700CFD95E /* PicDecorTests */,
 				B86BB7041AD4D5B600CFD95E /* Products */,

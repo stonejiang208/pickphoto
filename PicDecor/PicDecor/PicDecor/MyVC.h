@@ -17,7 +17,9 @@
 @interface MyVC :
   UIViewController <
     UIImagePickerControllerDelegate,
-   UINavigationControllerDelegate
+    UINavigationControllerDelegate,
+    UIActionSheetDelegate,
+    UIPopoverControllerDelegate
 >
 {
   
