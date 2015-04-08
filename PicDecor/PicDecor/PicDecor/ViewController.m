@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "MyVC.h"
 @interface ViewController ()
 
 @end
@@ -26,5 +26,6 @@
 
 - (IBAction)onBtnHello:(id)sender {
   NSLog (@"Btn clicked");
+  [MyVC foo];
 }
 @end

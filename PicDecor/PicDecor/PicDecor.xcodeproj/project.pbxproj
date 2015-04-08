@@ -14,6 +14,7 @@
 		B86BB7141AD4D5B600CFD95E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B86BB7131AD4D5B600CFD95E /* Images.xcassets */; };
 		B86BB7171AD4D5B600CFD95E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B86BB7151AD4D5B600CFD95E /* LaunchScreen.xib */; };
 		B86BB7231AD4D5B700CFD95E /* PicDecorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B86BB7221AD4D5B700CFD95E /* PicDecorTests.m */; };
+		B86BB7311AD4E4B900CFD95E /* MyVC.mm in Sources */ = {isa = PBXBuildFile; fileRef = B86BB7301AD4E4B900CFD95E /* MyVC.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		B86BB71C1AD4D5B700CFD95E /* PicDecorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicDecorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B86BB7211AD4D5B700CFD95E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B86BB7221AD4D5B700CFD95E /* PicDecorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PicDecorTests.m; sourceTree = "<group>"; };
+		B86BB72F1AD4E4B900CFD95E /* MyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyVC.h; sourceTree = "<group>"; };
+		B86BB7301AD4E4B900CFD95E /* MyVC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyVC.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 		B86BB7051AD4D5B600CFD95E /* PicDecor */ = {
 			isa = PBXGroup;
 			children = (
+				B86BB72F1AD4E4B900CFD95E /* MyVC.h */,
+				B86BB7301AD4E4B900CFD95E /* MyVC.mm */,
 				B86BB70A1AD4D5B600CFD95E /* AppDelegate.h */,
 				B86BB70B1AD4D5B600CFD95E /* AppDelegate.m */,
 				B86BB70D1AD4D5B600CFD95E /* ViewController.h */,
@@ -221,6 +226,7 @@
 			files = (
 				B86BB70F1AD4D5B600CFD95E /* ViewController.m in Sources */,
 				B86BB70C1AD4D5B600CFD95E /* AppDelegate.m in Sources */,
+				B86BB7311AD4E4B900CFD95E /* MyVC.mm in Sources */,
 				B86BB7091AD4D5B600CFD95E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
